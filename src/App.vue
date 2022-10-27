@@ -1,9 +1,7 @@
 <script setup></script>
 
 <template>
-  <section>
-    hello!
-  </section>
+	<section>hello!</section>
 </template>
 
 <style scoped></style>
