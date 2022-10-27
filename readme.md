@@ -1,2 +1,2 @@
 # journal.themixhelp.ovh
-my awesome blog!
+my awesome blog! ✨
