@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-	<section>
+	<section class="app-wrapper">
 		<router-view></router-view>
 	</section>
 </template>

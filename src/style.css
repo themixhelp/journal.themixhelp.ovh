@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+	--dark: #252c2d;
+	--light: #f2f7f2;
+
+    /* custom colors */
+
+	--green: #17b890;
+    --grey: #BFC5C1;
+}
+
+.toggle {
+    --dark: #f2f7f2;
+    --light: #252c2d;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Ubuntu Mono', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+main {
+	width: 100vw;
+	min-height: 100vh;
+
+	padding: 2rem;
+
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+a {
+    color: var(--dark);
+
+    text-decoration: none;
+}
