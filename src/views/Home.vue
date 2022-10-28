@@ -19,7 +19,7 @@
 
 <style scoped>
 	.home-wrapper {
-		min-height: calc(100vh - 2 * 2rem); /* TODO: change this! */
+		min-height: calc(100vh - (2 * 2rem)); 
 
 		display: grid;
 		grid-template-rows: auto 1fr auto;
