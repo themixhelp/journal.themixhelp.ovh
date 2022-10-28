@@ -4,15 +4,15 @@
 	--dark: #252c2d;
 	--light: #f2f7f2;
 
-    /* custom colors */
+	/* custom colors */
 
 	--green: #17b890;
-    --grey: #BFC5C1;
+	--grey: #bfc5c1;
 }
 
 .toggle {
-    --dark: #f2f7f2;
-    --light: #252c2d;
+	--dark: #f2f7f2;
+	--light: #252c2d;
 }
 
 *,
@@ -36,12 +36,12 @@ main {
 
 	padding: 2rem;
 
-    color: var(--dark);
-    background-color: var(--light);
+	color: var(--dark);
+	background-color: var(--light);
 }
 
 a {
-    color: var(--dark);
+	color: var(--dark);
 
-    text-decoration: none;
+	text-decoration: none;
 }

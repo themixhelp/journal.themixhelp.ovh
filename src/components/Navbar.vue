@@ -5,61 +5,61 @@
 		<h1>themixhelp!</h1>
 
 		<aside>
-            <a href="#">tryb nocny</a>
+			<a href="#">tryb nocny</a>
 			<a href="https://github.com/themixhelp/journal.themixhelp.ovh">github</a>
 		</aside>
 	</section>
 </template>
 
 <style scoped>
-    .navbar-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+	.navbar-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-        padding-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
 
-        font-size: 1.25rem;
-    }
+		font-size: 1.25rem;
+	}
 
-    .navbar-wrapper h1 {
-        font-size: 2rem;
-    }
+	.navbar-wrapper h1 {
+		font-size: 2rem;
+	}
 
-    .navbar-wrapper aside {
-        display: flex;
+	.navbar-wrapper aside {
+		display: flex;
 
-        margin-left: .75rem;
-    }
+		margin-left: 0.75rem;
+	}
 
-    .navbar-wrapper aside a {
-        position: relative;
+	.navbar-wrapper aside a {
+		position: relative;
 
-        margin-left: 1rem;
-        padding-bottom: .5rem;
-    }
+		margin-left: 1rem;
+		padding-bottom: 0.5rem;
+	}
 
-    .navbar-wrapper aside a::before {
-        content: '';
+	.navbar-wrapper aside a::before {
+		content: '';
 
-        display: block;
-        width: 100%;
-        height: 3px;
+		display: block;
+		width: 100%;
+		height: 3px;
 
-        position: absolute;
-        bottom: 0;
+		position: absolute;
+		bottom: 0;
 
-        background-color: var(--green);
-        
-        border-radius: 8px;
+		background-color: var(--green);
 
-        transform: scaleX(0);
-        transform-origin: right;
+		border-radius: 8px;
 
-        transition: transform 300ms;
-    }
-    .navbar-wrapper aside a:hover::before {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
+		transform: scaleX(0);
+		transform-origin: right;
+
+		transition: transform 300ms;
+	}
+	.navbar-wrapper aside a:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
 </style>
