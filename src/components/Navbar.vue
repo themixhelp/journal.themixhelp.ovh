@@ -1,11 +1,13 @@
-<script setup></script>
+<script setup>
+	import AppearanceSwitcher from './AppearanceSwitcher.vue'
+</script>
 
 <template>
 	<section class="navbar-wrapper">
 		<h1>themixhelp!</h1>
 
 		<aside>
-			<a href="#">tryb nocny</a>
+			<AppearanceSwitcher />
 			<a href="https://github.com/themixhelp/journal.themixhelp.ovh">github</a>
 		</aside>
 	</section>
@@ -32,14 +34,14 @@
 		margin-left: 0.75rem;
 	}
 
-	.navbar-wrapper aside a {
+	.navbar-wrapper aside * {
 		position: relative;
 
 		margin-left: 1rem;
 		padding-bottom: 0.5rem;
 	}
 
-	.navbar-wrapper aside a::before {
+	.navbar-wrapper aside *::before {
 		content: '';
 
 		display: block;
@@ -58,7 +60,7 @@
 
 		transition: transform 300ms;
 	}
-	.navbar-wrapper aside a:hover::before {
+	.navbar-wrapper aside *:hover::before {
 		transform: scaleX(1);
 		transform-origin: left;
 	}
