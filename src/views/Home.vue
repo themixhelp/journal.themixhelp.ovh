@@ -2,7 +2,7 @@
 
 <template>
 	<section>
-		<router-view></router-view>
+		<h1>witaj, świecie!</h1>
 	</section>
 </template>
 
