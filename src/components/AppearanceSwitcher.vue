@@ -8,6 +8,7 @@
 
 	const switchAppearance = () => {
 		ROOT.classList.toggle('inverted')
+		ROOT.classList.add('inverted-transition')
 
 		STATE = STATE === '0' ? '1' : '0'
 		localStorage.setItem('APPEARANCE', STATE)
