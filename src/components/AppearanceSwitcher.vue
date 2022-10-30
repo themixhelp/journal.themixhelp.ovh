@@ -1,8 +1,10 @@
 <script setup>
-	const ROOT = document.querySelector('main')
-	let STATE = localStorage.getItem('APPEARANCE') ? localStorage.getItem('APPEARANCE') : '0'
+	import { ref } from 'vue'
 
-	if (STATE === '1') {
+	const ROOT = document.querySelector('main')
+	let STATE = ref(localStorage.getItem('APPEARANCE') ? localStorage.getItem('APPEARANCE') : '0')
+
+	if (STATE.value === '1') {
 		ROOT.classList.add('inverted')
 	}
 
@@ -10,14 +12,14 @@
 		ROOT.classList.toggle('inverted')
 		ROOT.classList.add('inverted-transition')
 
-		STATE = STATE === '0' ? '1' : '0'
-		localStorage.setItem('APPEARANCE', STATE)
+		STATE.value = STATE.value === '0' ? '1' : '0'
+		localStorage.setItem('APPEARANCE', STATE.value)
 	}
 </script>
 
 <template>
 	<section @click="switchAppearance" class="appearance-wrapper">
-		<span>zmień motyw</span>
+		<span>tryb {{ STATE === '0' ? 'nocny' : 'dzienny' }}</span>
 	</section>
 </template>
 
