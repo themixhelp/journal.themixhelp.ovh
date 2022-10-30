@@ -26,6 +26,8 @@
 
 	.home-wrapper .info {
 		padding-bottom: 0.75rem;
+
+		font-size: 1.35rem;
 		font-weight: 700;
 	}
 
