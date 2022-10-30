@@ -1,5 +1,6 @@
 <script setup>
 	import Navbar from './../components/Navbar.vue'
+	import ArticlesList from '../components/ArticlesList.vue'
 </script>
 
 <template>
@@ -7,8 +8,8 @@
 		<Navbar />
 
 		<section>
-			<p>wybierz interesujący Cię artykuł:</p>
-			<!-- <p>[29.10.2022] >>> { To pierwszy post! }</p> -->
+			<p class="info">wybierz interesujący Cię artykuł:</p>
+			<ArticlesList />
 		</section>
 
 		<footer>themixhelp, wszelkie prawa zastrzeżone</footer>
@@ -21,6 +22,11 @@
 
 		display: grid;
 		grid-template-rows: auto 1fr auto;
+	}
+
+	.home-wrapper .info {
+		padding-bottom: 0.75rem;
+		font-weight: 700;
 	}
 
 	footer {
