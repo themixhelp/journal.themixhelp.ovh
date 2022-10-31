@@ -1,5 +1,13 @@
 <script setup>
+	import { RouterLink } from 'vue-router'
 	import AppearanceSwitcher from './AppearanceSwitcher.vue'
+
+	const props = defineProps({
+		renderArticleNavbar: {
+			type: Boolean,
+			required: true,
+		},
+	})
 </script>
 
 <template>
@@ -8,7 +16,9 @@
 
 		<aside>
 			<AppearanceSwitcher />
-			<a href="https://github.com/themixhelp/journal.themixhelp.ovh">github</a>
+
+			<a v-if="!renderArticleNavbar" href="https://github.com/themixhelp/journal.themixhelp.ovh">github</a>
+			<RouterLink v-if="renderArticleNavbar" to="/">strona główna</RouterLink>
 		</aside>
 	</section>
 </template>

@@ -1,6 +1,7 @@
 <script setup>
 	import { ref } from 'vue'
-	import { DateTime } from 'luxon'
+	import { RouterLink } from 'vue-router'
+	import { parseTimestamp } from './../utils/parseTimestamp.js'
 	import instance from './../axios.js'
 
 	const ARTICLES_DATA = ref([])
@@ -8,12 +9,6 @@
 		showInfo: false,
 		errorCode: '',
 	})
-
-	const parseTimestamp = (ISO_DATE) => {
-		const { day, month, year } = DateTime.fromISO(ISO_DATE)
-
-		return `${day}.${month}.${year}`
-	}
 
 	instance
 		.get('/articles')
@@ -26,8 +21,10 @@
 
 <template>
 	<section class="articles-wrapper">
-		<section v-for="{ attributes: { title, publishedAt } } in ARTICLES_DATA">
-			<p>[{{ parseTimestamp(publishedAt) }}] >>> {{ title }}</p>
+		<section v-for="{ attributes: { title, slug, publishedAt } } in ARTICLES_DATA">
+			<RouterLink :to="slug">
+				{{ `[${parseTimestamp(publishedAt)}] >>> ${title}` }}
+			</RouterLink>
 		</section>
 
 		<p v-if="FAILED.showInfo">[{{ FAILED.errorCode }}] Wystąpił błąd! Spróbój ponownie później.</p>

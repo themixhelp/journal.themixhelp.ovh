@@ -5,7 +5,7 @@
 
 <template>
 	<section class="home-wrapper">
-		<Navbar />
+		<Navbar :render-article-navbar="false" />
 
 		<section>
 			<p class="info">wybierz interesujący Cię artykuł:</p>
